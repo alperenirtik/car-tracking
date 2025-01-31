@@ -1,0 +1,57 @@
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: linear-gradient(135deg, #f6f8ff 0%, #ffffff 100%);
+}
+
+.neo-shadow {
+    box-shadow: 20px 20px 60px #d1d9e6, -20px -20px 60px #ffffff;
+}
+
+.content-shadow {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+.map-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.5rem;
+}
+
+.map-overlay {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.custom-car-marker {
+    background: transparent;
+    border: none;
+}
+
+.car-container {
+    transform-origin: center;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.custom-car-marker {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes carBounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2px);
+    }
+}
+
+.car-animation {
+    animation: carBounce 0.5s ease-in-out infinite;
+}
